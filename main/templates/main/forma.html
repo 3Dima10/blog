@@ -1,0 +1,85 @@
+{% extends 'main/index.html'%}
+
+{% block title %}
+Форма по добавлению статей
+{% endblock %}
+
+{% block body %}
+<style>
+    form {
+        margin-left: 5%;
+        width: 90%;
+        margin-top: 3%;
+    }
+
+    .fora {
+        margin-top: 4%;
+        margin-left: 32%;
+        color: aliceblue;
+    }
+    .btn-success{
+        margin-left: 25%;
+        margin-bottom: 4%;
+        width: 50%;
+    }
+    .box-fr{
+        background-color: #282828;
+        width: 95%;
+        margin-left: 3%;
+        margin-bottom: 5%;
+        border-radius: 25px;
+    }
+
+    /* @media (max-width: 768px) {
+        .div-stato form {
+            margin-left: -15%;
+            width: 100%;
+            margin-top: 3%;
+        }
+
+        .fora {
+            margin-top: -25%;
+            margin-left: -25%;
+        }
+    } */
+
+    @media (max-width: 450px) {
+        .div-stato form {
+            margin-left: 5%;
+            width: 90%;
+            margin-top: 3%;
+        }
+
+        .fora {
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        .btn-success{
+            margin-top: -5%;
+        }
+    }
+</style>
+
+<div class="fithers">
+    <div class="box-fr">
+        <h1 class="fora">Форма по добавлению статей</h1>
+        <div class="div-stato">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.title }}<br>
+                {{ form.anons }}<br>
+                {{ form.text }}<br>
+                {{ form.data }}<br>
+                <span>{{ error }}</span><br>
+
+                <!-- <input type="text" placeholder="Название статьй" class="form-control"><br>
+                <input type="text" placeholder="Анонс статьй" class="form-control"><br>
+                <textarea class="form-control" placeholder="Текст статьй"></textarea><br>
+                <input type="date" class="form-control"><br>
+                <input type="time" class="form-control"><br> -->
+                <button class="btn btn-success" type="submit"><i class="fas fa-plus-circle"></i> Добавить статью</button><br>
+            </form>
+        </div>
+    </div>
+</div>
+    {%endblock%}

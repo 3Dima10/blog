@@ -1,0 +1,47 @@
+{% extends 'main/index.html'%}
+
+{% block title %}
+Удаление статьй
+{% endblock %}
+
+{% block body %}
+<style>
+    form {
+        margin-left: 30%;
+        width: 43%;
+        margin-top: 3%;
+    }
+
+    .fora {
+        margin-top: -6%;
+    }
+    
+    @media (max-width: 768px) {
+        form {
+            margin-left: 15%;
+            width: 100%;
+            margin-top: 3%;
+        }
+
+        .fora {
+            margin-top: 6%;
+            margin-left: 22%;
+            /* font-size: 30px; */
+            color: aliceblue;
+        }
+        .btn-danger{
+            margin-left: 14%;
+        }
+    }
+</style>
+
+<div class="fithers">
+
+    <h1 class="fora">Удаление статьй</h1>
+    <form method="post">
+        {% csrf_token %}
+        <span>{{ error }}</span><br>
+        <button class="btn btn-danger" type="submit"><i class="fas fa-solid fa-trash fa-bounce"></i> Удалить
+            статью</button><br>
+    </form>
+    {%endblock%}

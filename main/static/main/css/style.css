@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@600&family=Pacifico&family=Rubik+Glitch+Pop&family=Russo+One&display=swap');
+
+
+body {
+    background-color: #3B3B3B;
+}
+
+.nav_div {
+    margin: -0.8%;
+    background-color: #262626;
+    height: 80px;
+}
+
+a {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 3%;
+}
+
+a .logo {
+    margin-top: 1.5%;
+    margin-left: 2%;
+}
+
+.aut {
+    float: right;
+    margin-right: 2%;
+    margin-top: 1.8%;
+}
+
+h4 {
+    color: aliceblue;
+    margin-left: 6%;
+    margin-top: -2.5%;
+    width: auto;
+    font-family: Russo One;
+
+}
+
+#dol {
+    width: 50%;
+    height: 25px;
+    margin-left: 35%;
+    margin-top: -3%;
+}
+
+.int_po {
+    width: 50%;
+    height: 28pt;
+    border-radius: 40px;
+    border: 3px solid rgb(0, 0, 72);
+    color: rgb(255, 255, 255);
+    background-color: rgba(30, 30, 30, 0.892);
+    padding-left: 20px;
+}
+
+.int_po::placeholder {
+    color: rgb(255, 255, 255);
+    /* text-align: right; */
+}
+
+.int_po::first-line {
+    padding: 25px;
+}
+/* .int_po:focus{
+    border-color: 3px solid rgb(0, 0, 176);
+    background-color: aqua;
+} */
+
+.poisk {
+    height: 28pt;
+    width: 16%;
+    border-bottom: 40px;
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 72);
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 116, 0.945);
+}
+
+.poisk:hover {
+    background-color: rgba(255, 201, 40, 0.889);
+
+}
+/* .awatar {
+    border-radius: 50%;
+    width: 50%;
+    height: 40px;
+    float: right;
+}
+
+.awatar_a {
+    width: 5%;
+    height: 40px;
+    float: right;
+    margin-right: 3%;
+    margin-top: 1.5%;
+}
+
+.plus {
+    width: 5%;
+    height: auto;
+    margin-right: 5%;
+    margin-top: 1.4%;
+    float: right;
+}
+
+.btn_plus {
+    border-radius: 25px;
+    width: 70%;
+    height: 40px;
+    border-bottom: 40px;
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 72);
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 167, 119, 0.945);
+} */

@@ -1,0 +1,80 @@
+{% extends 'main/index.html'%}
+{% load static %}
+
+{% block title %}Вход{% endblock %}
+
+
+
+{% block body %}
+<style>
+    .fithers{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .rew{
+        height: 400px;
+        background-color: #1B1B1B;
+        width: 25%;
+        border-radius: 25px;
+    }
+    h2{
+        color: rgb(255, 255, 255);
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+    .fora{
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+    .form-input{
+        margin-top: 5%;
+        border-radius: 10px;
+        background-color: #8F8F8F;
+        border: 3px solid rgb(0, 0, 72);
+        width: 80%;
+        height: 40px;
+    }
+    .form-input::placeholder{
+        color: rgb(255, 255, 255);
+    }
+
+    #reg{
+        margin-top: 5%;
+        margin-left: 30%;
+    }
+
+    @media (max-width: 450px) {
+        .rew {
+            margin-top: 15%;
+            height: 500px;
+            background-color: #1B1B1B;
+            width: 96%;
+            border-radius: 25px;
+        }
+        #reg {
+            margin-top: 5%;
+            margin-left: 12%;
+            width: 55%;
+        }
+    }
+
+</style>
+<div class="fithers">
+    <div class="rew">
+        <h2>Аунтефикация</h2>
+        <form method="post">
+            {% csrf_token %}
+        <div class="fora">
+            {% for f in form %}
+            <p>{{ f }}</p>
+            
+            <div class="form-error">{{ f.errors }}</div>
+            {% endfor %}
+            <button class="btn btn-success" id="reg" type="submit">Войти</button>
+        </div>
+        </form>
+    </div>
+</div>
+{%endblock%}
